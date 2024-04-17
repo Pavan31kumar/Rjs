@@ -1,0 +1,27 @@
+########################################################################
+#
+# Date: Decembre 2006 Authors: Guillaume Vareille, Michel Sanner
+#
+#    vareille@scripps.edu
+#    sanner@scripps.edu
+#
+#       The Scripps Research Institute (TSRI)
+#       Molecular Graphics Lab
+#       La Jolla, CA 92037, USA
+#
+# Copyright: Guillaume Vareille, Michel Sanner and TSRI
+#
+#    mglutil Resource File
+#
+#########################################################################
+# To customize mglutil, you can modify the _mglutilrc file:
+# unix: ~/.mgltools/[version number]/mglutil/_mglutilrc
+# windows: \Documents and Settings\(user name)\.mgltools\(version numer)\mglutil\_mglutilrc
+# DejaVu will generate this file automatically if it can't find it
+# Do not modify the original source file
+##################################################################
+
+import os
+
+widgetsOnBackWindowsCanGrabFocus = (os.name != 'nt') # True, False
+

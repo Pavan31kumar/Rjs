@@ -1,0 +1,48 @@
+########################################################################
+#
+# Date: Decembre 2006 Authors: Guillaume Vareille, Michel Sanner
+#
+#    vareille@scripps.edu
+#    sanner@scripps.edu
+#
+#       The Scripps Research Institute (TSRI)
+#       Molecular Graphics Lab
+#       La Jolla, CA 92037, USA
+#
+# Copyright: Guillaume Vareille, Michel Sanner and TSRI
+#
+#    DejaVu Resource File
+#
+#########################################################################
+# To customize DejaVu, you can modify the _dejavurc file:
+# unix: ~/.mgltools/[version number]/DejaVu/_dejavurc
+# windows: \Documents and Settings\(user name)\.mgltools\(version numer)\DejaVu\_dejavurc
+# DejaVu will generate it automatically if it doesn't exist.
+# Do not modify the original source file DejaVu/__init__.py
+##################################################################
+
+preventIntelBug_BlackTriangles = None # True, False or None (will evaluate GL_VENDOR)
+preventIntelBug_WhiteTriangles = None # True, False or None (will evaluate GL_VENDOR)
+defaultSpinningMode = 0 # 0 - None , 1 - Spin , 2 - Bounce , 3 - Oscillate
+allowedAntiAliasInMotion = 0 # 0,2,3,4,8,15,24,66
+#enableStereo = False # True, False
+defaultAntiAlias = None # None,0,2,3,4,8,15,24,66, None will decide if the graphic card is good enough
+enableSelectionContour = True # True, False
+selectionContourSize = 0 # 0 (= disabled), 1,2,3 .....
+selectionContourColor = (0., 1., 1., .7) # (1., 0., 1., .7)
+selectionPatternSize = 6 # 0 .... 50 (0 = disabled)
+enableVertexArrayVBO = False
+enableVertexArrayNonVBO = False
+enableVertexArray = enableVertexArrayVBO or enableVertexArrayNonVBO
+def functionName0(level=1):
+    # i.e. this func => level 0 (useless)
+    # calling function => level 1
+    # one function up => level 2
+    assert level > 0 , level
+    lsf = sys._getframe(level)
+    functionname = lsf.f_code.co_name
+    from os import sep
+    filename = lsf.f_code.co_filename.split(sep)[-1]
+    linenumber = lsf.f_lineno
+    if True: #filename == 'MaterialEditor.py':
+        print functionname, filename, linenumber
