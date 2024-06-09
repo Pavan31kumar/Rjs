@@ -20,3 +20,13 @@ function findfact(v){                           // findfact
 }
 var result=findfact(x);
 console.log(x+'       '+result);
+
+y=6;
+function Ffact(v){
+    if(v==1)
+        return v;
+    else
+    return v*Ffact(v-1);
+}
+var fResult=Ffact(y)
+console.log(y+'    '+fResult);
