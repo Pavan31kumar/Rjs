@@ -20,3 +20,15 @@ display();
 console.log('from outSide of Display '+a);
 
 //  Note-: let- when global and local varible have same variable name.... then use to let before the local variable
+console.log('-----------------------------------------------');
+function add(a,b){                                    // 'a','b'  are inputs of function
+    var rec='result :';                               // rec is outside of sum
+    function sum(){            
+        var c= 'inside sum';                          // var 'c' is inside of sum       
+        return c+' '+rec+' '+(a+b);
+    }
+    return sum();                                     // it returns total functioning of sum
+}
+
+var x=add(20,40);
+console.log(x);
